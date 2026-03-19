@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivepulso — Bienestar Sexual para América Latina</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --deep: #1A0A2E;
+    --plum: #4A154B;
+    --berry: #8B2252;
+    --coral: #E8606A;
+    --warm: #F5E6D3;
+    --cream: #FFF8F0;
+    --light-plum: #E8D5F5;
+    --muted: #9A8FA8;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--deep);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* Animated background orbs */
+  .orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.3;
+    animation: float 20s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .orb-1 {
+    width: 500px; height: 500px;
+    background: var(--berry);
+    top: -150px; right: -100px;
+    animation-delay: 0s;
+  }
+  .orb-2 {
+    width: 400px; height: 400px;
+    background: var(--plum);
+    bottom: -100px; left: -100px;
+    animation-delay: -7s;
+  }
+  .orb-3 {
+    width: 300px; height: 300px;
+    background: var(--coral);
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    animation-delay: -14s;
+    opacity: 0.15;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(30px, -40px) scale(1.05); }
+    50% { transform: translate(-20px, 20px) scale(0.95); }
+    75% { transform: translate(40px, 30px) scale(1.02); }
+  }
+
+  /* Main container */
+  .container {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    text-align: center;
+  }
+
+  /* Pill badge */
+  .badge {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 1px solid rgba(232, 96, 106, 0.4);
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--coral);
+    margin-bottom: 40px;
+    animation: fadeUp 1s ease-out 0.2s both;
+    backdrop-filter: blur(10px);
+    background: rgba(232, 96, 106, 0.05);
+  }
+
+  /* Logo / Brand */
+  .brand {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(56px, 12vw, 120px);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    line-height: 1;
+    margin-bottom: 8px;
+    animation: fadeUp 1s ease-out 0.4s both;
+    background: linear-gradient(135deg, var(--white) 0%, var(--light-plum) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tagline {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: clamp(18px, 3.5vw, 28px);
+    color: var(--coral);
+    margin-bottom: 48px;
+    animation: fadeUp 1s ease-out 0.6s both;
+    font-weight: 400;
+  }
+
+  /* Description */
+  .description {
+    max-width: 540px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--light-plum);
+    margin-bottom: 48px;
+    animation: fadeUp 1s ease-out 0.8s both;
+    font-weight: 300;
+  }
+
+  .description strong {
+    color: var(--white);
+    font-weight: 500;
+  }
+
+  /* Email form */
+  .form-wrapper {
+    animation: fadeUp 1s ease-out 1s both;
+    width: 100%;
+    max-width: 460px;
+    margin-bottom: 24px;
+  }
+
+  .form-group {
+    display: flex;
+    gap: 0;
+    border-radius: 50px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group:focus-within {
+    border-color: var(--coral);
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .form-group input {
+    flex: 1;
+    padding: 16px 24px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .form-group input::placeholder {
+    color: var(--muted);
+  }
+
+  .form-group button {
+    padding: 16px 28px;
+    background: var(--coral);
+    border: none;
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .form-group button:hover {
+    background: var(--berry);
+  }
+
+  .form-note {
+    font-size: 12px;
+    color: var(--muted);
+    animation: fadeUp 1s ease-out 1.1s both;
+    margin-bottom: 56px;
+  }
+
+  /* Three pillars */
+  .pillars {
+    display: flex;
+    gap: 40px;
+    max-width: 700px;
+    margin-bottom: 56px;
+    animation: fadeUp 1s ease-out 1.3s both;
+  }
+
+  .pillar {
+    flex: 1;
+    text-align: center;
+  }
+
+  .pillar-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+  }
+
+  .pillar h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--white);
+  }
+
+  .pillar p {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+  /* Divider */
+  .divider {
+    width: 60px;
+    height: 2px;
+    background: var(--coral);
+    margin-bottom: 40px;
+    animation: fadeUp 1s ease-out 1.2s both;
+  }
+
+  /* Social links */
+  .socials {
+    display: flex;
+    gap: 24px;
+    animation: fadeUp 1s ease-out 1.5s both;
+    margin-bottom: 32px;
+  }
+
+  .socials a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+  }
+
+  .socials a:hover {
+    color: var(--coral);
+  }
+
+  /* Privacy tagline */
+  .privacy {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+    animation: fadeUp 1s ease-out 1.6s both;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .privacy span {
+    color: var(--coral);
+  }
+
+  /* Animations */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 600px) {
+    .pillars {
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .form-group {
+      flex-direction: column;
+      border-radius: 16px;
+    }
+
+    .form-group button {
+      border-radius: 0 0 16px 16px;
+    }
+
+    .container {
+      padding: 40px 20px;
+    }
+
+    .socials {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<div class="container">
+
+  <div class="badge">Próximamente · Coming Soon</div>
+
+  <h1 class="brand">VIVEPULSO</h1>
+
+  <p class="tagline">Vive tu pulso.</p>
+
+  <p class="description">
+    <strong>La primera marca premium de bienestar sexual de América Latina.</strong><br><br>
+    Productos curados. Educación inclusiva. Comunidad LGBTQ+ friendly.<br>
+    Porque el placer es salud, y la salud es para todos.
+  </p>
+
+  <div class="divider"></div>
+
+  <div class="form-wrapper">
+    <div class="form-group">
+      <input type="email" placeholder="Tu correo electrónico" aria-label="Email address">
+      <button type="submit">QUIERO SABER MÁS</button>
+    </div>
+  </div>
+
+  <p class="form-note">Sé de los primeros en conocer Vivepulso. Sin spam. Solo buenas vibras. ✨</p>
+
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-icon">✦</div>
+      <h3>Productos Premium</h3>
+      <p>Curados para tu bienestar. Body-safe, discretos, enviados a tu puerta.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">✦</div>
+      <h3>Educación Sexual</h3>
+      <p>Talleres y contenido para explorar tu sexualidad sin tabú ni vergüenza.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">✦</div>
+      <h3>Comunidad Inclusiva</h3>
+      <p>Un espacio seguro para todas las identidades, orientaciones y cuerpos.</p>
+    </div>
+  </div>
+
+  <div class="socials">
+    <a href="#">INSTAGRAM</a>
+    <a href="#">TIKTOK</a>
+    <a href="#">WHATSAPP</a>
+  </div>
+
+  <p class="privacy"><span>Tu pulso está seguro con nosotros.</span></p>
+
+</div>
+
+</body>
+</html>
