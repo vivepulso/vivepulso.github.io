@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- HOMEPAGE -->
+  <url>
+    <loc>https://vivepulso.com/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- BLOG INDEX -->
+  <url>
+    <loc>https://vivepulso.com/blog/</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- POST 1: VIBRATOR GUIDE (ES/EN pair) -->
+  <url>
+    <loc>https://vivepulso.com/blog/guia-elegir-primer-vibrador.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivepulso.com/blog/guia-elegir-primer-vibrador.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivepulso.com/blog/choosing-your-first-vibrator.html"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vivepulso.com/blog/choosing-your-first-vibrator.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivepulso.com/blog/choosing-your-first-vibrator.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivepulso.com/blog/guia-elegir-primer-vibrador.html"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- POST 2: FOUNDER STORY (ES/EN pair) -->
+  <url>
+    <loc>https://vivepulso.com/blog/que-es-vivepulso.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivepulso.com/blog/que-es-vivepulso.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivepulso.com/blog/what-is-vivepulso.html"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vivepulso.com/blog/what-is-vivepulso.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivepulso.com/blog/what-is-vivepulso.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivepulso.com/blog/que-es-vivepulso.html"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- POST 3: ORGASM MYTHS (ES/EN pair) -->
+  <url>
+    <loc>https://vivepulso.com/blog/mitos-orgasmo.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivepulso.com/blog/mitos-orgasmo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivepulso.com/blog/orgasm-myths.html"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vivepulso.com/blog/orgasm-myths.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivepulso.com/blog/orgasm-myths.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivepulso.com/blog/mitos-orgasmo.html"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- POST 4: GAY MEN'S HEALTH (ES/EN pair) -->
+  <url>
+    <loc>https://vivepulso.com/blog/salud-sexual-hombres-gay.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivepulso.com/blog/salud-sexual-hombres-gay.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivepulso.com/blog/gay-mens-sexual-health.html"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://vivepulso.com/blog/gay-mens-sexual-health.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://vivepulso.com/blog/gay-mens-sexual-health.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://vivepulso.com/blog/salud-sexual-hombres-gay.html"/>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
